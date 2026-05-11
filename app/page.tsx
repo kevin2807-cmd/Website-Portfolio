@@ -127,31 +127,35 @@ export default function Home() {
 
           {/* Contact button — hidden on mobile (below image instead) */}
           {!isMobile && (
-            <button
-              style={{
-                border: "1px solid #e0e0e0",
-                backgroundColor: "transparent",
-                color: "#e0e0e0",
-                padding: "0.6rem 1.4rem",
-                fontSize: "0.85rem",
-                fontFamily: "'Courier New', Courier, monospace",
-                cursor: "pointer",
-                letterSpacing: "0.05em",
-                transition: "background-color 0.2s, color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor =
-                  "#e0e0e0";
-                (e.currentTarget as HTMLElement).style.color = "#2d2d3a";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor =
-                  "transparent";
-                (e.currentTarget as HTMLElement).style.color = "#e0e0e0";
-              }}
-            >
-              Contact me !!
-            </button>
+            <div>
+              <a
+                href="/contacts"
+                rel="noopener noreferrer"
+                style={{
+                  border: "1px solid #e0e0e0",
+                  backgroundColor: "transparent",
+                  color: "#e0e0e0",
+                  padding: "0.6rem 1.4rem",
+                  fontSize: "0.85rem",
+                  fontFamily: "'Courier New', Courier, monospace",
+                  cursor: "pointer",
+                  letterSpacing: "0.05em",
+                  transition: "background-color 0.2s, color 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor =
+                    "#e0e0e0";
+                  (e.currentTarget as HTMLElement).style.color = "#2d2d3a";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor =
+                    "transparent";
+                  (e.currentTarget as HTMLElement).style.color = "#e0e0e0";
+                }}
+              >
+                Contact me !!
+              </a>
+            </div>
           )}
         </div>
 
@@ -247,11 +251,6 @@ export default function Home() {
             }}
           >
             {/* Photo placeholder */}
-            {/*
-              FIX 1: position:relative + overflow:hidden on the wrapper,
-                      so next/image fill has a real bounding box.
-              FIX 2: src starts with "/" to load from /public folder.
-            */}
             <div
               style={{
                 position: "relative",
@@ -542,10 +541,6 @@ export default function Home() {
                   backgroundColor: "#1e1e28",
                 }}
               >
-                {/* Ganti placeholder div ini dengan <Image> jika gambar sudah tersedia.
-                  Contoh:
-                  <Image src={project.image} alt={project.title} fill style={{ objectFit: 'cover' }} />
-                */}
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -604,9 +599,9 @@ export default function Home() {
                   {project.buttons.map((btn, idx) => (
                     <a
                       key={idx}
-                      href={btn.link} // Mengambil link dari data/projects.ts
-                      target="_blank" // Membuka di tab baru
-                      rel="noopener noreferrer" // Keamanan tambahan
+                      href={btn.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{
                         padding: "0.4rem 1rem",
                         backgroundColor: btn.outline
@@ -617,11 +612,10 @@ export default function Home() {
                         fontFamily: "'Courier New', Courier, monospace",
                         fontSize: "0.8rem",
                         cursor: "pointer",
-                        textDecoration: "none", // Menghilangkan garis bawah link
-                        display: "inline-block", // Agar padding berfungsi seperti tombol
+                        textDecoration: "none",
+                        display: "inline-block",
                         transition: "all 0.2s ease",
                       }}
-                      // Efek hover agar tetap interaktif
                       onMouseEnter={(e) => {
                         if (btn.outline) {
                           (
@@ -1010,7 +1004,8 @@ export default function Home() {
               efficiency.
             </p>
 
-            <button
+            <a
+              href="/about-me"
               style={{
                 padding: "0.6rem 1.4rem",
                 backgroundColor: "transparent",
@@ -1036,7 +1031,7 @@ export default function Home() {
               }}
             >
               Read more {"->"}
-            </button>
+            </a>
           </div>
 
           {/* Bagian Kanan: Gambar & Dekorasi */}
@@ -1128,7 +1123,7 @@ export default function Home() {
                   width: "100%",
                   height: "100%",
                   zIndex: 1,
-                  borderBottom: "1px solid #c084fc", // Garis bantu jika gambar belum ada
+                  borderBottom: "1px solid #c084fc",
                 }}
               >
                 {/* Gambar Profil */}
@@ -1219,7 +1214,7 @@ export default function Home() {
             style={{
               height: "1px",
               backgroundColor: "#c084fc",
-              width: isMobile ? "40%" : "150px", // Garis dibuat lebih pendek sesuai desain
+              width: isMobile ? "40%" : "150px",
               opacity: 0.5,
             }}
           />

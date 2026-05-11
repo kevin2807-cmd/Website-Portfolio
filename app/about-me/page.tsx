@@ -1,56 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// import Image from "next/image";
-
-// --- DATA UNTUK SKILLS ---
-const skillsData = [
-  {
-    category: "Languages",
-    items: [
-      "TypeScript",
-      "Go (Golang)",
-      "JavaScript",
-      "HTML/CSS",
-      "Python",
-      "C/C++",
-      "Bash",
-    ],
-  },
-  {
-    category: "Databases",
-    items: ["PostgreSQL", "MySQL", "GORM"],
-  },
-  {
-    category: "Cyber Security Tools",
-    items: [
-      "Wireshark",
-      "Kali Linux",
-      "Nmap",
-      "Metasploit",
-      "Burp Suite",
-      "Ghidra",
-      "John the Ripper",
-    ],
-  },
-  {
-    category: "Frameworks",
-    items: ["Next.js", "React", "NestJS", "Tailwind", "Mittre ATT&CK"],
-  },
-  {
-    category: "Other",
-    items: ["System Architecture", "UML", "BMC", "REST APIs"],
-  },
-];
-
-// --- DATA UNTUK FUN FACTS ---
-const funFacts = [
-  "I live in Surabaya, East Java",
-  "I'm an Informatics student in my 6th semester",
-  "I like exploring Cyber Security concepts",
-  "I love designing System Architectures",
-  "I often build apps with Next.js and Go",
-];
+import { funFacts, skillsData } from "@/data/Projects";
+import Image from "next/image";
 
 export default function AboutMe() {
   const [mounted, setMounted] = useState(false);
@@ -249,7 +201,12 @@ export default function AboutMe() {
                   color: "#4a4a5a",
                 }}
               >
-                [Area Gambar Profil]
+                <Image
+                  src="/about-me.png"
+                  alt="Profile Image"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Footer() {
     <footer
       style={{
         borderTop: "1px solid #3d3d4e",
-        padding: isMobile ? "1.25rem 1.5rem" : "1.5rem 6rem",
+        padding: isMobile ? "1.25rem 1.5rem" : "1.5rem 10rem",
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         alignItems: "center",
@@ -44,7 +44,7 @@ export default function Footer() {
           justifyContent: "center",
         }}
       >
-        {["home", "works", "about-me", "contacts"].map((item) => (
+        {["home", "projects", "about-me", "contacts"].map((item) => (
           <a
             key={item}
             href={`#${item}`}
@@ -65,11 +65,6 @@ export default function Footer() {
           </a>
         ))}
       </div>
-
-      {/* Right: made with */}
-      <span>
-        Made with <span style={{ color: "#c084fc" }}>Next.js</span>
-      </span>
     </footer>
   );
 }

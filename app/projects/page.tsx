@@ -4,10 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { completeApps } from "@/data/Projects";
 import { smallProjects } from "@/data/Projects";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
-
-// Data untuk aplikasi lengkap (dengan gambar)
 
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
@@ -193,9 +189,9 @@ export default function Projects() {
                   {project.buttons.map((btn, idx) => (
                     <a
                       key={idx}
-                      href={btn.link} // Mengambil link dari data/projects.ts
-                      target="_blank" // Membuka di tab baru
-                      rel="noopener noreferrer" // Keamanan tambahan
+                      href={btn.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{
                         padding: "0.4rem 1rem",
                         backgroundColor: btn.outline
@@ -206,11 +202,10 @@ export default function Projects() {
                         fontFamily: "'Courier New', Courier, monospace",
                         fontSize: "0.8rem",
                         cursor: "pointer",
-                        textDecoration: "none", // Menghilangkan garis bawah link
-                        display: "inline-block", // Agar padding berfungsi seperti tombol
+                        textDecoration: "none",
+                        display: "inline-block",
                         transition: "all 0.2s ease",
                       }}
-                      // Efek hover agar tetap interaktif
                       onMouseEnter={(e) => {
                         if (btn.outline) {
                           (
@@ -352,9 +347,9 @@ export default function Projects() {
                   {project.buttons.map((btn, idx) => (
                     <a
                       key={idx}
-                      href={btn.link} // Mengambil link dari data/projects.ts
-                      target="_blank" // Membuka di tab baru
-                      rel="noopener noreferrer" // Keamanan tambahan
+                      href={btn.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{
                         padding: "0.4rem 1rem",
                         backgroundColor: btn.outline
@@ -365,11 +360,10 @@ export default function Projects() {
                         fontFamily: "'Courier New', Courier, monospace",
                         fontSize: "0.8rem",
                         cursor: "pointer",
-                        textDecoration: "none", // Menghilangkan garis bawah link
-                        display: "inline-block", // Agar padding berfungsi seperti tombol
+                        textDecoration: "none",
+                        display: "inline-block",
                         transition: "all 0.2s ease",
                       }}
-                      // Efek hover agar tetap interaktif
                       onMouseEnter={(e) => {
                         if (btn.outline) {
                           (

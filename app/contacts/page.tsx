@@ -90,8 +90,6 @@ export default function Contacts() {
         >
           <span style={{ color: "#c084fc" }}>/</span>contacts
         </h1>
-        {/* Catatan: Di desain aslinya tertulis "Who am i?", tapi karena ini halaman kontak, 
-            "How to reach me" akan lebih masuk akal. Kamu bisa ubah kembali jika ingin sama persis. */}
         <p style={{ fontSize: "0.95rem", color: "#e0e0e0" }}>Who am i?</p>
       </div>
 
