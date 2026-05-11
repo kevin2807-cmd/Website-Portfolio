@@ -5,7 +5,7 @@ export const projectsData = [
     tech: "Golang, PostgreSQL, Redis, Docker, Kubernetes",
     description:
       "Website for managing inventory, orders, and shipments for a warehouse",
-    image: "/project1.png",
+    image: "/Project1.png",
     buttons: [
       {
         label: "Github <~>",
