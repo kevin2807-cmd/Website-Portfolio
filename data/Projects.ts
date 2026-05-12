@@ -114,7 +114,7 @@ export const completeApps = [
       {
         label: "Github <~>",
         outline: true,
-        link: "https://github.com/kevin2807-cmd/",
+        link: "https://github.com/kevin2807-cmd/Website-Portfolio.git",
       },
     ],
   },
@@ -153,7 +153,13 @@ export const smallProjects = [
     title: "Malware Analysis",
     tech: "Malware Analysis, Reverse Engineering, C++, Python, Ghidra, Detect-It-Easy, Sandbox",
     desc: "Analysis of a malware sample using static analysis, advanced static analysis, and dynamic analysis techniques to understand its behavior and functionality.",
-    buttons: [{ label: "PDF <~>", outline: true, link: "#" }],
+    buttons: [
+      {
+        label: "PDF <~>",
+        outline: true,
+        link: "https://drive.google.com/file/d/1ZS2uU-HoVDKLZKucyWvsEigYtLOm5K8K/view?usp=sharing",
+      },
+    ],
   },
   {
     id: 4,
